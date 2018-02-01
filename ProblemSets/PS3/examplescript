@@ -1,0 +1,3 @@
+#1/bin/sh 
+#Above is the Shebang script should be exucted without really telling it 
+# This a comment on my shell script 

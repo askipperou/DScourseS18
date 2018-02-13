@@ -1,0 +1,34 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{PS4}
+\author{Alex Skipper }
+\date{February 2018}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+
+\begin{document}
+\maketitle
+
+
+\section{Question: 5.D}
+The object of mydf is list 
+The object of mydf(moneysign)players is a data.frame
+
+\section{Question: 6.5.B}
+What happened: unable to find an inherited method for function ‘select’ for signature ‘"data.frame", "NULL"’
+
+Happened because some functions in R can not be applied to sparkR. So, to get a data frame to work in sparkR, one needs to convert the data frame into a sparkR data frame with createDataFrame(...)
+
+\section{Question: 6.6.B}
+What happened: unable to find an inherited method for function ‘filter’ for signature ‘"data.frame", "logical"’
+
+Happened because of the same issue above a logical issue happened instead of NULL
+
+\section{Question: 7}
+Some data sources that I would be interested in scraping from would be economic data from quantmod or quandl. I'm leaning towards doing a topic over education or sports. One topic I have in mind for education, is deciding whether certain economic factors, I do not know which ones yet, impact a county's education rank. As for sports, maybe finding out if players are being overpaid or underpaid for their performance. Looking at professional basketball or football player salaries and stats from ESPN.
+
+
+\end{document}
+

@@ -29,6 +29,7 @@
 #combining summarize and groupBy 
 
 #------------------------------------------------------
+library(sparklyr)
 #creating a data frame 
 df1<-as.data.frame(iris)
 

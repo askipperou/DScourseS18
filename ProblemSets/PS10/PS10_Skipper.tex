@@ -1,0 +1,105 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{PS10}
+\author{Alex Skipper }
+\date{February. 2018}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+
+\begin{document}
+\maketitle
+Worked with Conrad 
+\section{Part 7}
+From tuning model\\
+Tree\\
+minsplit=10;\\ 
+minbucket=6; \\
+cp=0.0269 : \\
+f1.test.mean=0.89,\\
+gmean.test.mean=0.686\\
+
+
+
+Logit  Regression\\
+lambda=0.0263;\\
+alpha=0.786 :\\
+f1.test.mean=0.897\\
+,gmean.test.mean=0.662\\
+
+
+
+Neural Network\\
+size=9; \\
+decay=0.357; \\
+maxit=1000 :\\
+f1.test.mean=0.907\\
+,gmean.test.mean=0.756\\
+
+
+
+
+KKNN\\
+ k=23 :\\
+ f1.test.mean=0.897\\
+ ,gmean.test.mean=0.747\\
+
+ 
+ 
+ 
+SVM\\
+cost=1; \\
+gamma=0.5 \\
+: f1.test.mean=0.904,\\
+gmean.test.mean=0.736\\
+
+
+
+\section{Part 8 and 9}
+
+
+
+With the optimal tuning parameters: verifying the performance on cross validated sets:\\
+
+
+performance.Tree
+Aggr perf:\\ f1.test.mean=0.896,gmean.testmean=0.658\\
+
+performance.Logit\\
+Aggr perf: f1.test.mean=0.897,gmean.test.mean=0.662\\
+
+performance.Neural\\
+Aggr perf: f1.test.mean=0.906,gmean.test.mean=0.753\\
+
+performance.KKNN\\
+Aggr perf: f1.test.mean=0.896,gmean.test.mean=0.744\\
+
+performance.SVM\\
+Aggr perf: f1.test.mean=0.906,gmean.test.mean=0.735\\
+
+performance.Bayes\\
+Aggr perf: f1.test.mean=0.884,gmean.test.mean=0.726\\
+
+
+Out of sample performance:\\
+Tree\\
+out of sample performance: f1:0.8968421    gmean 0.6730932 \\
+Logit\\
+out of sample performance: f1  0.8986422    gmean 0.6762722\\
+Neural\\
+out of sample performacne: f1 0.9094500 gmean 0.7675114\\
+KKNN\\
+out of sample performance: f1 0.8975970    gmean 0.7564945\\
+SVM\\
+out of sample performance: f1 0.9048742  gmean 0.7478175\\
+Bayes\\
+out of sample performance: f1 0.8825952  gmean 0.7340489\\
+
+Only the tree and logit models varied from the rest but were close to each other. The rest of the model's numbers are close to each other. It appears that either model will be beneficial. 
+
+
+
+
+
+\end{document}}

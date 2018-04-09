@@ -60,41 +60,30 @@ gmean.test.mean=0.736\\
 
 
 
+
 With the optimal tuning parameters: verifying the performance on cross validated sets:\\
+\begin{center}
+ \begin{tabular}{||c c c c c ||} 
+ \hline
+ Model & f1 & gmean & Out-of-sample f1 & Out-of-sample gmean\\ [0.5ex] 
+ \hline\hline
+ Tree & 0.896 & 0.658 & 0.8968421 & 0.6730932  \\ 
+ \hline
+ Logit & 0.897 & 0.662 &  0.8986422 &  0.6762722\\
+ \hline
+ Neural & 0.906 & 0.753 & 0.9094500 & 0.7675114 \\
+ \hline
+ KKNN & 0.896 & 0.744 & 0.8975970  & 0.7564945 \\
+ \hline
+ SVM & 0.906 & 0.735 & 0.9048742 & 0.7478175 \\
+ \hline
+ Bayes & 0.884 & 0.726 & 0.8825952 & 0.7340489\\[1ex] 
+ \hline
+\end{tabular}
+\end{center}
 
+\end{document}
 
-performance.Tree
-Aggr perf:\\ f1.test.mean=0.896,gmean.testmean=0.658\\
-
-performance.Logit\\
-Aggr perf: f1.test.mean=0.897,gmean.test.mean=0.662\\
-
-performance.Neural\\
-Aggr perf: f1.test.mean=0.906,gmean.test.mean=0.753\\
-
-performance.KKNN\\
-Aggr perf: f1.test.mean=0.896,gmean.test.mean=0.744\\
-
-performance.SVM\\
-Aggr perf: f1.test.mean=0.906,gmean.test.mean=0.735\\
-
-performance.Bayes\\
-Aggr perf: f1.test.mean=0.884,gmean.test.mean=0.726\\
-
-
-Out of sample performance:\\
-Tree\\
-out of sample performance: f1:0.8968421    gmean 0.6730932 \\
-Logit\\
-out of sample performance: f1  0.8986422    gmean 0.6762722\\
-Neural\\
-out of sample performacne: f1 0.9094500 gmean 0.7675114\\
-KKNN\\
-out of sample performance: f1 0.8975970    gmean 0.7564945\\
-SVM\\
-out of sample performance: f1 0.9048742  gmean 0.7478175\\
-Bayes\\
-out of sample performance: f1 0.8825952  gmean 0.7340489\\
 
 Only the tree and logit models varied from the rest but were close to each other. The rest of the model's numbers are close to each other. It appears that either model will be beneficial. 
 

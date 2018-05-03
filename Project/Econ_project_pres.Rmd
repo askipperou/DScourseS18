@@ -1,0 +1,124 @@
+---
+title: "Do Certain Unique Factors Impact a Country’s Education Rank/Test Score?"
+author: "Alex Skipper"
+date: "4/21/2018"
+output: beamer_presentation
+   
+---
+
+
+
+## Introduction 
+
+- Countries education standing is based on  Programme for International Student Assessment (PISA) scores:
+Approximately 500,000 students around the globe take the test
+
+
+
+## Data
+- All of the data can be found in the World Data Bank, United Nations Development Programme: Human Development Reports, World Prison Brief, United Nations Educational, Scientific and Cultural Organization, PISA 2000:Overview of the Study Design, Method and Results written by Stanat · Artelt · Baumert · Klieme · Neubrand · Prenzel · Schiefele · Schneider · Schümer · Tillmann · Weiß, and Organisation for Economic Co-operation and Development (OECD)
+- Picked out by hand 
+
+##Data cont.
+- 30 Countries and 8 interaction terms 
+- yi=Average of the Reading, Math, Science Scores on PISA test
+- x1= Enrollment rate of both sexes 
+- x2= The education index 
+- x3= School Expenditure as a percentage of GDP 
+- x4= Unemployment Rate
+- x5= Health expenditure per capita 
+- x6= Pupil/Teacher Ratio
+- x7= Prison Population Rate per hundred thousand of the national population
+- x8= Gross Domestic Savings as a percentage of GDP
+
+
+## Methods 
+- Year 2000
+  - R2<-lm(x ~ x1+x2+x3+x4+x5+x6+x7+x8, data=RealEconExcel2000)
+- Year 2010
+  - R21<-lm(x0 ~ x11+x21+x31+x41+x51+x61+x71+x81, data=RealEconExcel2010)
+- Altering model 
+
+## Findings
+
+\begin{table}[!htbp] \centering 
+\small
+  \caption{Year 2000 Regression} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{1pt}}lc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{1}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-2} 
+\\[-1.8ex] & x \\ 
+\hline \\[-1.8ex] 
+ x1 & 0.165 (0.301) \\ 
+  x2 & 321.682$^{***}$ (71.789) \\ 
+  x3 & $-$0.484 (3.965) \\ 
+  x4 & 0.016 (1.370) \\ 
+  x5 & $-$0.002 (0.005) \\ 
+  x6 & 1.181 (0.874) \\ 
+  x7 & $-$0.043 (0.027) \\ 
+  x8 & $-$0.258 (0.557) \\ 
+  Constant & 232.685$^{***}$ (50.959) \\ 
+ \hline \\[-1.8ex] 
+Observations & 30 \\ 
+R$^{2}$ & 0.648 \\ 
+Adjusted R$^{2}$ & 0.513 \\ 
+Residual Std. Error & 21.719 (df = 21) \\ 
+F Statistic & 4.826$^{***}$ (df = 8; 21) \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{1}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table} 
+
+## Findings cont.
+- Year 2000
+- Prediction: 561.1137
+- Original: 529.7 (Australia)
+- Difference: 31.41366
+
+## Findings cont.
+\begin{table}[!htbp] \centering 
+\small
+  \caption{Year 2010 Regression} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{1pt}}lc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{1}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-2} 
+\\[-1.8ex] & x0 \\ 
+\hline \\[-1.8ex] 
+ x11 & $-$0.044 (0.494) \\ 
+  x21 & 261.602$^{***}$ (75.110) \\ 
+  x31 & $-$1.453 (3.230) \\ 
+  x41 & $-$0.656 (1.198) \\ 
+  x51 & 0.0004 (0.002) \\ 
+  x61 & 0.234 (0.778) \\ 
+  x71 & $-$0.053 (0.031) \\ 
+  x81 & $-$0.222 (0.500) \\ 
+  Constant & 309.655$^{***}$ (59.026) \\ 
+ \hline \\[-1.8ex] 
+Observations & 30 \\ 
+R$^{2}$ & 0.511 \\ 
+Adjusted R$^{2}$ & 0.325 \\ 
+Residual Std. Error & 19.888 (df = 21) \\ 
+F Statistic & 2.747$^{**}$ (df = 8; 21) \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{1}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table}
+
+## Findings cont.
+- Year 2010
+- Prediction: 529.7426 
+- original: 518.7 (Australia)
+- Difference: 11.04265
+
+## What did we learn? 
+- The Education Index is significant 
+- Though the rest were insignificant, significance can be found in these varibales with further research. Ex. Prison Population rate
+- “Children with incarcerated parents are 33 percent more likely to have speech or language problems—like stuttering or stammering—than otherwise similar children whose fathers have not been incarcerated” (Morsy,2016). 

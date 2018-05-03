@@ -73,11 +73,7 @@ F Statistic & 4.826$^{***}$ (df = 8; 21) \\
 \end{tabular} 
 \end{table} 
 
-## Findings cont.
-- Year 2000
-- Prediction: 561.1137
-- Original: 529.7 (Australia)
-- Difference: 31.41366
+
 
 ## Findings cont.
 \begin{table}[!htbp] \centering 
@@ -113,10 +109,25 @@ F Statistic & 2.747$^{**}$ (df = 8; 21) \\
 \end{table}
 
 ## Findings cont.
-- Year 2010
-- Prediction: 529.7426 
-- original: 518.7 (Australia)
-- Difference: 11.04265
+
+\begin{table}[]
+    \centering
+    \caption{Prediction Accuracy: Australia}
+    \begin{tabular}{||c c c c||}
+    \hline
+ Model & Original Observation & Prediction & Difference\\ [0.5ex] 
+ \hline\hline
+  Year 2000 & 529.7 & 561.1137 & 31.4137  \\ 
+ \hline
+ Reduced 2000  & 529.7 & 535.8616 & 6.1616\\
+ \hline
+ Year 2010  & 518.7& 529.7426 & 11.0427 \\
+ \hline
+ Reduced 2010 & 518.7 & 521.3722 & 2.6722 \\
+[1ex] 
+ \hline
+    \end{tabular}
+\end{table}
 
 ## What did we learn? 
 - The Education Index is significant 
